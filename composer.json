@@ -1,0 +1,6 @@
+{
+    "name": "studiogau/cafechandra",
+    "require": {
+        "studiogau/chandra": "^0.2.0"
+    }
+}

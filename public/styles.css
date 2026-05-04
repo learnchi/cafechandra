@@ -1,0 +1,231 @@
+body {
+  margin: 0;
+  background-color: #faebd2;
+  color: #4e1708;
+}
+/** リンクタグ */
+a,
+a:visited {
+  color: #faebd2;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: #ffffff;
+}
+
+/** 木製のボタン */
+.wooden-button {
+  text-align: center;
+}
+  .wooden-button button {
+    background-image: url("img/button_bg.png");
+    width: calc(191px + 5px);
+    height: calc(40px + 5px);
+    background-color: transparent;
+    border-color: transparent;
+    color: #faebd2;
+    font-weight: bolder;
+    cursor: pointer;
+    /* 通常時の影 */
+    filter: drop-shadow(0 3px 0 rgba(90, 50, 20, 0.5));
+  }
+    .wooden-button button:active {
+      transform: translateY(3px);
+      transform: translate(2px, 2px);
+      /* 押したら影を減らす */
+      filter: drop-shadow(0 1px 0 rgba(90, 50, 20, 0.5));
+    }
+
+
+/* ヘッダー */
+header {
+  background-image: url("img/header_bg.png");
+  background-repeat: repeat-x;
+  background-position: top left;
+  height: 144px; /* ←画像の高さ */
+
+  display: flex;
+  justify-content: center; /* 横中央 */
+  align-items: center;     /* 縦中央 */
+}
+
+main {
+  width: 960px;
+  margin: 0 auto; /* 横中央 */
+}
+
+  main #hero {
+    background-image: url("img/hero.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    height: 546px; /* ←画像の高さ */
+  }
+    main #hero #menu {
+      background-image: url("img/menu_bg.png");
+      background-repeat: no-repeat;
+      background-position: top right;
+      text-align:right;
+      color: #faebd2;
+      padding: 10px 20px;
+
+    }
+    main #hero h2 {
+      color: #faebd2;
+      margin: 180px 20px auto 480px;
+      padding: 10px 0px;
+      border-bottom: 1px solid #faebd2;
+    }
+    main #hero h3 {
+      color: #faebd2;
+      margin: 10px auto auto 510px;
+      font-size: 1rem;
+    }
+    main #hero .wooden-button {
+      margin: 20px auto auto 510px;
+      text-align: center;
+    }
+
+  main .main-box {
+    display: flex;
+    justify-content: space-between;
+    background-image: 
+      url("img/bean.png"),
+      url("img/main_bg.png");
+    
+    background-repeat: 
+      no-repeat,
+      repeat-x;
+    
+    background-position: 
+      right 5px bottom 5px,
+      left top;
+
+    background-size: 
+      70px auto,
+      auto 100%;
+    padding: 40px 0;
+    transform: translate(0, -8px);
+    margin-bottom: -8px;
+  }
+    /** 当店のこだわりボックス **/
+    main .main-box .concept {
+      margin: 0 20px;
+    }
+      main .main-box .concept h2 {
+        position: relative;
+        padding-left: 30px;
+      }
+
+      main .main-box .concept h2::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 21px;
+        height: 21px;
+
+        background: url("img/hishi.png") no-repeat center;
+        background-size: contain;
+      }
+
+      main .main-box .concept .frame-box {
+        border: 8px solid transparent;
+        border-image: url("img/imageflame.png") 8 fill stretch;
+        box-sizing: border-box;
+
+        /** 画像のサイズ + 枠線の幅 * 2 */
+        width: calc(428px + 8px + 8px);
+        height: calc(253px + 8px + 8px);
+      }
+
+    /** お知らせボックス **/
+    main .main-box .news-box {
+      margin: 0 20px;
+    }
+    main .main-box .news-box {
+      position: relative;
+
+      border: 76px solid transparent;
+      border-image: url("img/infobox.png") 76 stretch;
+
+      background-image: url("img/infobox_bg.png");
+      background-repeat: repeat;
+
+      box-sizing: border-box
+    }
+
+    /* タイトルを上に浮かせる */
+    main .main-box .news-box .news-title {
+      position: absolute;
+      top: -90px;
+      left: -40px;
+      color: #faebd2;
+      letter-spacing: 0.5rem;
+    }
+
+    main .main-box .news-box ul.news-content {
+      margin: 0;
+      padding: 0;
+      width: calc(100% + 40px);
+      transform: translate(-20px, -20px);
+      /** height: calc(100% + 40px); */
+      height: 100%;
+    }
+    main .main-box .news-box ul.news-content li {
+      padding: 20px 0;
+      border-bottom: 1px solid #e9d4bb;
+    }
+
+  main #shop-info {
+    background-image: 
+      url("img/bean2.png"),
+      url("img/shopinfo_bg.png");
+
+    background-repeat: 
+      no-repeat,
+      repeat-x;
+
+    background-position: 
+      right 20px bottom 50px,
+      left top;
+
+    background-size: 
+      80px auto,
+      auto;
+
+    height: 320px;
+  }
+    main #shop-info h2 {
+      color: #f6dab4;
+      margin: 0 auto 10px 20px;
+      padding: 10px 0px;
+    }
+    main #shop-info .infocontent {
+      display: flex;
+      justify-content: flex-start;
+    }
+      main #shop-info .infocontent img {
+        border: 2px solid #f6dab4;
+        margin: 0 24px;
+      }
+      main #shop-info .infocontent p {
+        color: #f6dab4;
+        margin: 0 10px;
+        padding: 10px;
+        border-bottom: 1px solid #f6dab4;
+      }
+footer {
+  background-image: url("img/footer_bg.png");
+  background-repeat: repeat-x;
+  /* height: 69px; ←画像の高さ */
+  color:#e9d4bb;
+  text-align:right;
+  padding:1rem;
+}
+  footer p {
+    margin:0;
+  }
